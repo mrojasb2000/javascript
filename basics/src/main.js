@@ -14,5 +14,3 @@ document.querySelector('#app').innerHTML = `
     <p>It has been ${formatter.format(diffInYear, 'year')} years since its announcement.</p>
   </div>
 `
-
-setupCounter(document.querySelector('#counter'))
