@@ -7,6 +7,14 @@ const formatter = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
 const diffInDays = Math.round(diff / 86400000);
 const diffInYear = Math.round(diffInDays / 365);
 
+const checkValue = (value) => {
+  if (!value || null) {
+    throw new Error ("The value is invalid!, Try again.")
+  }
+}
+
+const myArray = Array.from([1, 2, 3], x => x + x);
+console.log(myArray);
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Hello World!</h1>
@@ -25,5 +33,12 @@ document.querySelector('#app').innerHTML = `
     <p>"null:", ${ Boolean(null)}</p>
     <p>"undefined:", ${ Boolean(undefined)}</p>
     <p>"NaN:", ${ Boolean(NaN)}</p>
-  </div>
-`
+    <p>"true:", ${ Boolean(true)}</p>
+    <p>"false:", ${ Boolean(false)}</p>
+    <p>"true:", ${ Boolean(true)}</p>
+    <p>"false:", ${ Boolean(false)}</p>
+    <p>"function(){}:", ${checkValue(function(){})}</p>
+    <p>"undefined:", checkValue(undefined) -> Uncaught Error: The value is invalid!, Try again.</p>
+    <p>"null:", checkValue(null) -> Uncaught Error: The value is invalid!, Try again.</p>
+    <p>"Array.from([1, 2, 3], x => x + x): ${myArray}"</p>
+  `
