@@ -17,6 +17,11 @@ const myArray = Array.from([1, 2, 3], x => x + x);
 console.log(...myArray, 4);
 console.log(myArray.push(5))
 console.log(myArray.unshift(6))
+console.log(myArray.pop());
+console.log(myArray.shift())
+console.log(myArray.splice(0, 1))
+
+console.log(myArray);
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Hello World!</h1>
@@ -46,4 +51,8 @@ document.querySelector('#app').innerHTML = `
     <p>"[...myArray, 4]: ${[...myArray, 4]}"</p>
     <p>"myArray.push(5), Appends new elements to the end of an array: ${myArray.push(5)}"</p>
     <p>"myArray.unshift(6), Inserts new elements at the start of an array: ${myArray.unshift(6)}"</p>
+    <p>"myArray.pop(), Removes the last element from an array: ${myArray.pop()}"</p>
+    <p>"myArray.shift(), Removes the first element from an array: ${myArray.shift()}"</p>
+    <p>"myArray.splice(0, 1), Removes the first element from an array: ${myArray.splice(0, 1)}"</p>
+    <p>"myArray:", ${myArray}</p>
   `
