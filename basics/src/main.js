@@ -13,7 +13,7 @@ const diffInYear = Math.round(diffInDays / 365);
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Hello World!</h1>
-    <p>JavaScript was announced ${formatter.format(diffInDays, 'days')} ago.</p>
+    <p>JavaScript was announced ${formatter.format(diffInDays, 'days')}.</p>
     <p>It has been ${formatter.format(diffInYear, 'year')} years since its announcement.</p>
   </div>
 `
